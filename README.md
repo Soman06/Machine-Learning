@@ -1,4 +1,4 @@
-This repository showcases my Machine Learning projects using tools such as NumPy, Pandas and Pytorch. Below are descriptions of each project in detail.
+This repository showcases my Machine Learning projects using tools such as NumPy, Pandas and Pytorch. I link my projects to my real world passion for motorsports by creating relevant tools that can be used in our racing team.
 
 # Battery Sensor Data Analyser
 
