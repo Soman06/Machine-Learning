@@ -13,8 +13,9 @@ A NumPy-based data processing pipeline for cleaning and analysing EV battery
 sensor data, inspired by real BMS work on a Formula Student electric vehicle.
 
 **What it does**
-- Simulates realistic voltage, current and temperature sensor readings
-- Injects real-world faults (overvoltage, overcurrent, thermal spikes)
+- Loads real Li-ion battery discharge data from the NASA Ames 
+  Prognostics Center of Excellence (Battery B0005 dataset)
+- Applies domain-based physical limits to filter invalid readings
 - Detects and removes physically impossible readings using domain-based thresholds
 - Normalises data across sensors using Z-score standardisation
 - Identifies the most anomalous readings using a composite anomaly score
