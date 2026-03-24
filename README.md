@@ -9,14 +9,16 @@ motorsports by creating relevant tools that can be used in racing teams.
 ## 01 — NumPy
 
 ### Battery Sensor Data Analyser
-A NumPy-based data processing pipeline for cleaning and analysing EV battery 
-sensor data, inspired by real BMS work on a Formula Student electric vehicle.
+A NumPy-based data processing pipeline for cleaning and analysing real Li-ion 
+battery discharge data from the NASA Ames Prognostics Center of Excellence. 
+Inspired by BMS work on a Formula Student electric vehicle.
+
+![Sensor Analysis](01-numpy/sensor_analysis.png)
 
 **What it does**
 - Loads real Li-ion battery discharge data from the NASA Ames 
-  Prognostics Center of Excellence (Battery B0005 dataset)
+  Prognostics Center of Excellence (Battery 00005 dataset)
 - Applies domain-based physical limits to filter invalid readings
-- Detects and removes physically impossible readings using domain-based thresholds
 - Normalises data across sensors using Z-score standardisation
 - Identifies the most anomalous readings using a composite anomaly score
 - Visualises cleaned sensor traces with mean baseline
@@ -33,15 +35,16 @@ During my Formula Student work I debugged electrical faults in a real EV
 powertrain. This project applies the same fault-detection logic 
 programmatically using NumPy.
 
-**Stack:** Python · NumPy · Matplotlib
+**Stack:** Python · NumPy · Pandas · Matplotlib
 
 **How to run**
 1. Clone the repo
-2. Install dependencies: `pip install numpy matplotlib`
+2. Install dependencies: `pip install numpy matplotlib pandas openpyxl`
 3. Open the notebook in VS Code or Jupyter
 4. Run All cells
 
 📓 [View Notebook](01-numpy/Battery%20Sensor%20Data%20Analyser.ipynb)
+**Data:** [NASA Li-ion Battery Aging Dataset](https://www.kaggle.com/datasets/patrickfleith/nasa-battery-dataset)
 
 ---
 
