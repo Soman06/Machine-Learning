@@ -53,8 +53,10 @@ programmatically using NumPy.
 ### F1 Telemetry Analysis — 2024 Monza GP
 
 A Pandas-based telemetry analysis pipeline using real F1 timing and 
-car data from the FastF1 API. Built around the 2024 Italian Grand Prix 
-— one of the most strategically interesting races of the season.
+car data from the FastF1 API. Built around the 2024 Italian Grand Prix, 
+one of the most strategically interesting races of the season. This race
+is particulary memorable for me being a Ferrari fan myself, seeing them
+win their home race is always something special.
 
 #### The Story
 At the 2024 Monza GP, Charles Leclerc won from P4 on the grid by 
