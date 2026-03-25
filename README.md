@@ -36,6 +36,7 @@ powertrain. This project applies the same fault-detection logic
 programmatically using NumPy.
 
 **Stack:** Python · NumPy · Pandas · Matplotlib
+**Data:** [NASA Li-ion Battery Aging Dataset](https://www.kaggle.com/datasets/patrickfleith/nasa-battery-dataset)
 
 **How to run**
 1. Clone the repo
@@ -44,14 +45,62 @@ programmatically using NumPy.
 4. Run All cells
 
 📓 [View Notebook](01-numpy/Battery%20Sensor%20Data%20Analyser.ipynb)
-**Data:** [NASA Li-ion Battery Aging Dataset](https://www.kaggle.com/datasets/patrickfleith/nasa-battery-dataset)
 
 ---
 
 ## 02 — Pandas
 
-### EV Lap Data Analyser
-*(in progress)*
+### F1 Telemetry Analysis — 2024 Monza GP
+
+A Pandas-based telemetry analysis pipeline using real F1 timing and 
+car data from the FastF1 API. Built around the 2024 Italian Grand Prix 
+— one of the most strategically interesting races of the season.
+
+#### The Story
+At the 2024 Monza GP, Charles Leclerc won from P4 on the grid by 
+executing a 1-stop strategy while Lando Norris and Oscar Piastri — 
+the faster McLarens on raw pace — opted for a 2-stop strategy that 
+cost them the victory. This project uses real F1 data to quantify 
+exactly what happened and why the strategy worked.
+
+#### Qualifying Analysis
+![Monza Qualifying Analysis](02-pandas/monza_qualifying_analysis.png)
+
+- Driver pace comparison and gap to pole
+- Sector time breakdown — who was fastest in each sector
+- Speed trace and throttle/brake telemetry of the fastest lap
+- Driving breakdown — full throttle %, braking %, coasting %
+
+#### Race Analysis
+![Monza Race Analysis](02-pandas/monza_race_analysis.png)
+
+- Tyre strategy visualisation — LEC 1-stop vs NOR/PIA 2-stop
+- Race pace evolution across all stints
+- Tyre degradation per compound and stint
+- Cumulative lap time gap — LEC vs NOR across the full race
+- Strategy cost analysis — time lost in the pit lane vs tyre advantage gained
+
+**Concepts demonstrated**
+- DataFrame loading, exploration and cleaning
+- Timedelta conversion and time-based feature engineering
+- Boolean masking and targeted dropna for lap filtering
+- groupby and agg for multi-driver performance analysis
+- Rolling averages for pace smoothing
+- pd.cut for tyre age categorisation
+- Bridging Pandas to NumPy for telemetry calculations
+- Multi-panel Matplotlib visualisation
+
+**Stack:** Python · Pandas · NumPy · FastF1 · Matplotlib  
+**Data:** [FastF1 API](https://theoehrly.github.io/Fast-F1/)
+
+**How to run**
+1. Clone the repo
+2. Install dependencies: `pip install pandas numpy fastf1 matplotlib`
+3. Create the cache folder: `mkdir 02-pandas/f1_cache`
+4. Open `F1 Telemetry Project.ipynb` in VS Code or Jupyter
+5. Run All cells — first run will download session data (~200MB cached locally)
+
+📓 [View Notebook](02-pandas/F1%20Telemetry%20Project.ipynb)
 
 ---
 
